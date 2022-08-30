@@ -6,4 +6,6 @@ matplotlib>=3.2.2
 sklearn
 seaborn
 statsmodels
+scikit-learn
 imblearn
+collections
