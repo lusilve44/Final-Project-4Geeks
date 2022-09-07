@@ -8,4 +8,7 @@ seaborn
 statsmodels
 scikit-learn
 imblearn
+statsmodels
+patsy
+scipy
 #collections
