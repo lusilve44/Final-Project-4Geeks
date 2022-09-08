@@ -52,7 +52,6 @@ def transformation_X(data):
     data['aphelion_distance'], lambda3 = boxcox(data['aphelion_distance'])
     data['volume (m^3)'], lambda4 = boxcox(data['volume (m^3)'])
 
-    data.drop(columns = ['name', 'id', 'first_observation_date', 'last_observation_date'], inplace = True)
 
 def scaler_X(data):
     scaler = MinMaxScaler()
@@ -76,10 +75,18 @@ def transformation_y(data):
 
 
 # aplicacion MPO508629
+ 
+d1 = X_train[X_train['orbit_id'] == 'MPO508629'].index
+d2 = X_train[X_train['orbit_id'] == 'E2021-CI3'].index
+d3 = X_valid[X_valid['orbit_id'] == 'MPO392510'].index
 
-X_train = X_train.drop(X_train[X_train['orbit_id'] == 'MPO508629'].index)
-X_train = X_train.drop(X_train[X_train['orbit_id'] == 'E2021-CI3'].index)
-X_valid = X_valid.drop(X_valid[X_valid['orbit_id'] == 'MPO392510'].index)
+X_train = X_train.drop(d1)
+X_train = X_train.drop(d2)
+X_valid = X_valid.drop(d3)
+
+y_train = y_train.drop(d1)
+y_train = y_train.drop(d2)
+y_valid = y_valid.drop(d3)
 
 df_raw = df_raw.drop(df_raw[df_raw['orbit_id'] == 'MPO508629'].index[0])
 df_raw = df_raw.drop(df_raw[df_raw['orbit_id'] == 'E2021-CI3'].index[0])
