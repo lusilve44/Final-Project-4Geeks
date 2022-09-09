@@ -106,12 +106,12 @@ scaler_X(df_raw)
 
 imputer_train_valid(X_train)
 imputer_train_valid(X_valid)
-scaler_X(df_raw)
+imputer_train_valid(df_raw)
 
 transformation_y(y_train)
 transformation_y(y_valid)
 transformation_y(y_test)
-scaler_X(df_raw)
+transformation_y(df_raw)
 
 
 
