@@ -5,17 +5,17 @@ En esta instancia, vamos a analizar un dataset sobre objetos cercanos a la tierr
 Las aplicaciones fueron:
 
 - LogisticRegression: 
--    Penalización
--    Subsampling
--    Oversampling
--    Smote-Tomek 
+    - Penalización
+    - Subsampling
+    - Oversampling
+    - Smote-Tomek 
 
 
 - Random forest: 
--    Class Weighting
--    Bootstrap Class Weighting
--    Random Undersampling
--    Ensemble 
+    - Class Weighting
+    - Bootstrap Class Weighting
+    - Random Undersampling
+    - Ensemble 
 
 
 - One class SVM
